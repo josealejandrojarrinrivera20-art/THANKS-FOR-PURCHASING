@@ -10,17 +10,25 @@
     margin: 0;
     background: #ffffff;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow: hidden;
     position: relative;
+    text-align: center;
   }
   h1 {
     font-size: 3rem;
     color: #333;
-    text-align: center;
     z-index: 10;
+    margin-bottom: 1rem;
+  }
+  p {
+    font-size: 1.2rem;
+    color: #555;
+    z-index: 10;
+    max-width: 90%;
   }
   canvas {
     position: fixed;
@@ -35,11 +43,11 @@
 </head>
 <body>
   <h1>¡Gracias por tu compra!</h1>
+  <p>Ya puedes volver a Telegram y presionar <strong>“Ya pagué ✅”</strong> para entrar al premium.</p>
   <canvas id="confetti"></canvas>
 
 <script>
 // Confetti simple basado en canvas
-
 const canvas = document.getElementById('confetti');
 const ctx = canvas.getContext('2d');
 let W, H;
